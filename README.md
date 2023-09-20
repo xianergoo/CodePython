@@ -1,1 +1,1 @@
-# PythonLearnHub
+# Python learning for beginners
