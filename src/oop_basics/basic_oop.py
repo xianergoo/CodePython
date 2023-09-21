@@ -1,78 +1,267 @@
-class Myclass:
-    """A simple example class"""
-    i = 12345
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+# @Time : 2023/9/21 21:36
+# @Author : Z3
+# @Email: xianergoo@gmail.com
+from typing import Optional
+def separator():
+    print('*' * 25, 'this is separator', '*' * 25)
+# 类的基本属性
 
-    def f(self):
-        return 'hello world'
-    
-myclass = Myclass()
-print(myclass.f())
+class StudentsA():
 
-
-# 实例化操作（“调用”类对象）会创建一个空对象。 许多类喜欢创建带有特定初始状态的自定义实例。 为此类定义可能包含一个名为 __init__() 的特殊方法，就像这样:
-# def __init__(self):
-#     self.data = []
-
-class Complex:
-    def __init__(self, realpart, imagpart):
-        self.r = realpart
-        self.i = imagpart
-
-x = Complex(3, 4.5)
-print(x.r, x.i)
-
-print('-' * 35)
-
-# 一般来说，实例变量用于每个实例的唯一数据，而类变量用于类的所有实例共享的属性和方法:
-# 下面的类中 kind是类变量 name是实例变量
-class Dog:
-    kind = 'canine'
-
-    def __init__(self, name):
+    student = "college student"
+    def __init__(self, name, age):
         self.name = name
+        self.age = age
 
-d = Dog('A')
-e = Dog('B')
+stu1 = StudentsA('A', 18)
+stu2 = StudentsA('B', 19)
 
-print(
-d.kind, d.name, 
-e.kind, e.name
-)
+print(f'{stu1.name} is {stu1.age}, is a {stu1.student}')
+print(f'{stu2.name} is {stu2.age}, is a {stu2.student}')
 
-class Dog:
-    tricks = []
 
-    def __init__(self, name):
+separator()
+# 类方法
+class StudentsB():
+
+    student = "college student"
+    def __init__(self, name, age):
         self.name = name
+        self.age = age
 
-    def add_trick(self, trick):
-        self.tricks.append(trick)
+    def sing(self):
+        print('%s could sing'.format(self.name))
 
-a = Dog('A')
-b = Dog('b')
+    def jump(self):
+        print(f'{self.name} could jump')
+    def basketball(self):
+        print(f'{self.name} like basketball')
 
-a.add_trick('roll over')
-b.add_trick('play dead')
+stu1 = StudentsB('A', 19)
+stu1.sing()
+stu1.jump()
+stu1.basketball()
 
-print(b.tricks)
-print('-' * 35)
-# 因为使用类变量所以这是Dog b拥有a,b的trick 这是不对的 所以这时应该这么定义Dog
+separator()
+'''
+python中没有 public > default > protected > private 等属性来实现访问限制,
+因此需要别的方法来控制访问限制，实现私有变量可以通过加上__
+'''
+class StudentsC():
 
-class Dog:
-    
-    def __init__(self, name):
+    # student 是类属性，可以他通过 对象.__class__.student 访问
+    student = "大学生"
+    # init 是类的构造方法，在对象被创建的时候，就会自动调用这个方法
+    def __init__(self, name, age):
+        # 定义两个对象属性，这个属性在不同的对象中是不一样的
         self.name = name
-        self.tricks = []
+        if age>150:
+            raise ValueError("人的年龄无法达到 150 岁以上")
+        self.__age = age
 
-    def add_trick(self, trick):
-        self.tricks.append(trick)
+    def getAge(self):
+        return self.__age
 
-a = Dog('A')
-b = Dog('b')
+    def setAge(self, age):
+        if age > 150:
+            raise ValueError("人的年龄无法达到 150 岁以上")
+        self.__age = age
 
-a.add_trick('roll over')
-b.add_trick('play dead')
-print(b.tricks)
+
+stu1 = StudentsC("小红",18)
+stu2 = StudentsC("小黄",19)
+stu1.setAge(20)
+try:
+    print(stu1.__age)
+except Exception as e:
+    print(e)
+
+print('%s/"s age is %d '.format(stu1.name, stu1.getAge()))
+
+separator()
+
+# 封装继承堕胎
+## 继承
+
+class Dog():
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    # public func
+    def bark(self):
+        print(f"{self.name} bark")
+
+class pipi(Dog):
+
+    def play(self):
+        print(f'{self.name} can play')
+
+class dahuang(Dog):
+
+    def other(self):
+        print(f'{self.name} can sing')
+
+dog1 = pipi('pipi', 2)
+dog2 = dahuang('dahuang', 1)
+
+dog1.bark()
+dog1.play()
+dog2.bark()
+dog2.other()
+
+separator()
+
+# 方法覆盖
+class Dog():
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def bark(self):
+        print(f"{self.name} can bark")
+
+    def eat(self):
+        print(f"{self.name} 喜欢吃鸡肉")
+
+
+class pipi(Dog):
+
+    def play(self):
+        print(f"{self.name} 会打滚")
+
+    def eat(self):
+        print(f"{self.name} 喜欢吃火腿")
+
+
+dog1 = pipi("皮皮", 2)
+dog1.eat()
+
+## overload overwrite override
+
+class Dog():
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def bark(self):
+        print(f"{self.name} can bark")
+
+    def eat(self):
+        print(f"{self.name} 喜欢吃鸡肉")
+
+
+class pipi(Dog):
+
+    def __init__(self, name: str, age, size: Optional[str] = 'middle'):
+        self.name = name
+        self.age = age + 1
+        self.size = size
+
+    def play(self):
+        print(f"{self.name} 会打滚")
+
+    def eat(self):
+        print(f"{self.name} 喜欢吃火腿")
+
+
+dog1 = pipi("皮皮", 2)
+dog1.eat()
+print(dog1.size)
+print(dog1.age)
+
+separator()
+
+
+# 根据封装程度
+# 普通私有变量 __
+class Retangle():
+
+    # 内部访问，使用 hidden 任然可以被访问
+    # 使用 __作为私有属性，是外部不可以被访问
+    def __init__(self,width, height):
+        self.__width = width
+        self.__height = height
+
+    def setWidth(self,width):
+        self.__width = width
+
+    def getWidth(self):
+        return self.__width
+
+    def setHeight(self,height):
+        self.__height = height
+
+    def getHeight(self):
+        return self.__height
+
+## 使用装饰器 封装
+
+class Person():
+    '''
+        __xxxx 成为隐藏属性
+        __name -> _Person__name
+
+        使用 _xxx 作为私有属性，没有特殊需求，不要修改私有属性
+        类一般使用属性或方法不可见可以使用单下划线
+    '''
+    # 使用一个
+    def __init__(self,name):
+        self.__name = name
+
+    @property
+    def name(self):
+        print(f'私有变量__name的地址 {id(self.__name)}')
+        return self.__name
+
+
+    '''
+        setter
+        getter 方法更好的使用
+        @property，将一个 get 方法，转换为对象属性
+        @属性名.setter 讲一个 set 方法，转换为对象属性
+        两者缺一不可
+    '''
+
+    # setter 方法的的装饰器： @属性名.setter
+    @name.setter
+    def name(self, name):
+        self.__name = name
+
+
+
+p = Person('猴赛雷')
+
+## 通过getter 获得属性name
+p.__name = 'vvv'
+print(f'私有变量的值: {p.name}')
+print(f'动态变量__name的地址 {id(p.__name)}')
+print(f'动态变量的值: {p.__name}')
+'''
+私有变量__name的地址 2303605420464
+猴赛雷
+动态变量__name的地址 2303605132720
+
+这里可以看到p.__name在这里是动态变量就像下面的haha一样 改变p.__name并没有改变私有变量__name的值,
+且两个值的地址是不同的
+'''
+
+p.haha = 'aaa'
+print(p.haha)
+
+separator()
+
+
+
+
+
+
+
 
 
 
