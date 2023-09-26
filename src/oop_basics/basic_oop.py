@@ -3,6 +3,7 @@
 # @Time : 2023/9/21 21:36
 # @Author : Z3
 # @Email: xianergoo@gmail.com
+
 from typing import Optional
 def separator():
     print('*' * 25, 'this is separator', '*' * 25)
@@ -255,6 +256,66 @@ p.haha = 'aaa'
 print(p.haha)
 
 separator()
+
+
+# Syntax for inheritance
+
+# A Python program to demonstrate working of inheritance
+class Pet:
+		#__init__ is an constructor in Python
+		def __init__(self, name, age):	
+				self.name = name
+				self.age = age
+
+# Class Cat inheriting from the class Pet
+class Cat(Pet):		
+    def __init__(self, name, age):
+				# calling the super-class function __init__
+				# using the super() function
+	    super().__init__(name, age)
+        # self.male = male
+    
+def CatMain():
+		thePet = Pet("Pet", 1)
+		jess = Cat("Jess", 3)
+		
+		# isinstance() function to check whether a class is
+		# inherited from another class
+		print("Is jess a cat? " +str(isinstance(jess, Cat)))
+		print("Is jess a pet? " +str(isinstance(jess, Pet)))
+		print("Is the pet a cat? "+str(isinstance(thePet, Cat)))
+		print("Is thePet a Pet? " +str(isinstance(thePet, Pet)))
+		print(jess.name)
+          
+
+separator()
+
+# This program will reverse the string that is passed
+# to it from the main function
+class Reverse:
+    def __init__(self, data):
+        self.data = data
+        self.index = len(data)		
+    
+    
+    def __iter__(self):
+        return self
+	
+    def __next__(self):
+	if self.index == 0:
+            raise StopIteration   
+        self.index-= 1 
+        return self.data[self.index]
+
+def ReverseMain():
+	rev = Reverse('Drapsicle')
+	for char in rev:
+		print(char)
+
+if __name__=='__main__':
+	ReverseMain()
+
+
 
 
 
