@@ -25,7 +25,7 @@ def create_note_struct(file_name):
             chapter_title = chapter['chapter_title']
             chapter_filename = chapter['file_name']
             
-            folder_name = f'Chapter_{chapter_number}'
+            folder_name = chapter_number
             markdown_file_name = f'{chapter_title}.md'
             python_file_name = f'{chapter_filename}.py'
             
