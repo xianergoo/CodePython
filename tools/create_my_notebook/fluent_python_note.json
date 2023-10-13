@@ -1,0 +1,115 @@
+{
+    "note_name": "fluent_python",
+    "chapters": [
+      {
+        "chapter_number": "Chapter-01",
+        "chapter_title": "Python数据模型",
+        "file_name": "python_data_model"
+      },
+      {
+        "chapter_number": "Chapter-02",
+        "chapter_title": "序列构成的数组",
+        "file_name": "sequence_types"
+      },
+      {
+        "chapter_number": "Chapter-03",
+        "chapter_title": "字典和集合",
+        "file_name": "dictionaries_and_sets"
+      },
+      {
+        "chapter_number": "Chapter-04",
+        "chapter_title": "文本和字节序列",
+        "file_name": "text_and_byte_strings"
+      },
+      {
+        "chapter_number": "Chapter-05",
+        "chapter_title": "一等函数",
+        "file_name": "first-class_functions"
+      },
+      {
+        "chapter_number": "Chapter-06",
+        "chapter_title": "使用一等函数实现设计模式",
+        "file_name": "implementing_design_patterns_with_first-class_functions"
+      },
+      {
+        "chapter_number": "Chapter-07",
+        "chapter_title": "函数装饰器和闭包",
+        "file_name": "function_decorators_and_closures"
+      },
+      {
+        "chapter_number": "Chapter-08",
+        "chapter_title": "对象引用、可变性和垃圾回收",
+        "file_name": "object_references_mutability_and_garbage_collection"
+      },
+      {
+        "chapter_number": "Chapter-09",
+        "chapter_title": "符号表",
+        "file_name": "symbol_tables"
+      },
+      {
+        "chapter_number": "Chapter-10",
+        "chapter_title": "序列的修改、散列和切片",
+        "file_name": "sequence_modifications_hashing_and_slicing"
+      },
+      {
+        "chapter_number": "Chapter-11",
+        "chapter_title": "接口：从协议到抽象基类",
+        "file_name": "interfaces_from_protocols_to_abstract_base_classes"
+      },
+      {
+        "chapter_number": "Chapter-12",
+        "chapter_title": "继承：一切都是对象",
+        "file_name": "inheritance_everything_is_an_object"
+      },
+      {
+        "chapter_number": "Chapter-13",
+        "chapter_title": "正确重载运算符",
+        "file_name": "correctly_overloading_operators"
+      },
+      {
+        "chapter_number": "Chapter-14",
+        "chapter_title": "可迭代、迭代器和生成器",
+        "file_name": "iterables_iterators_and_generators"
+      },
+      {
+        "chapter_number": "Chapter-15",
+        "chapter_title": "上下文管理器和else块",
+        "file_name": "context_managers_and_else_blocks"
+      },
+      {
+        "chapter_number": "Chapter-16",
+        "chapter_title": "协程",
+        "file_name": "coroutines"
+      },
+      {
+        "chapter_number": "Chapter-17",
+        "chapter_title": "使用期物处理并发",
+        "file_name": "concurrency_with_futures"
+      },
+      {
+        "chapter_number": "Chapter-18",
+        "chapter_title": "使用asyncio包处理并发",
+        "file_name": "concurrency_with_asyncio"
+      },
+      {
+        "chapter_number": "Chapter-19",
+        "chapter_title": "动态属性和特性",
+        "file_name": "dynamic_attributes_and_properties"
+      },
+      {
+        "chapter_number": "Chapter-20",
+        "chapter_title": "属性描述符",
+        "file_name": "property_descriptors"
+      },
+      {
+        "chapter_number": "Chapter-21",
+        "chapter_title": "类元编程",
+        "file_name": "metaprogramming"
+      },
+      {
+        "chapter_number": "Chapter-22",
+        "chapter_title": "设计模式的实现",
+        "file_name": "implementing_design_patterns"
+      }
+    ]
+  }

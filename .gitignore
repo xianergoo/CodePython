@@ -24,15 +24,6 @@ wheels/
 .installed.cfg
 *.egg
 
-# PyInstaller
-# 通常用于将 Python 程序打包成可执行文件
-# 如果你不使用 PyInstaller，可以将此部分注释掉
-# https://www.pyinstaller.org/
-# 注意：某些项目可能需要特定的 .gitignore 配置
-# 请根据自己的项目需求进行调整
-# 参考：https://pyinstaller.readthedocs.io/en/stable/spec-files.html
-*.spec
-
 # IDEs and editors
 .idea/
 .vscode/
@@ -103,13 +94,6 @@ setuptools-build/
 
 # Jupyter Notebook
 .ipynb_checkpoints/
-
-# Documentation
-docs/_build/
-
-# Sphinx documentation
-docs/_build/
-docs/source/api/
 
 # Translations
 *.mo
