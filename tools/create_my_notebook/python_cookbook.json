@@ -1,0 +1,55 @@
+{
+    "note_name": "python_cookbook",
+    "chapters": [
+      {
+        "chapter_number": "Chapter 1",
+        "chapter_title": "Data Structures and Algorithms",
+        "file_name": "data_structures_and_algorithms"
+      },
+      {
+        "chapter_number": "Chapter 2",
+        "chapter_title": "Strings and Text",
+        "file_name": "strings_and_text"
+      },
+      {
+        "chapter_number": "Chapter 3",
+        "chapter_title": "Numbers, Dates, and Times",
+        "file_name": "numbers_dates_and_times"
+      },
+      {
+        "chapter_number": "Chapter 4",
+        "chapter_title": "Iterators and Generators",
+        "file_name": "iterators_and_generators"
+      },
+      {
+        "chapter_number": "Chapter 5",
+        "chapter_title": "Files and I/O",
+        "file_name": "files_and_io"
+      },
+      {
+        "chapter_number": "Chapter 6",
+        "chapter_title": "Data Encoding and Processing",
+        "file_name": "data_encoding_and_processing"
+      },
+      {
+        "chapter_number": "Chapter 7",
+        "chapter_title": "Functions",
+        "file_name": "functions"
+      },
+      {
+        "chapter_number": "Chapter 8",
+        "chapter_title": "Classes and Objects",
+        "file_name": "classes_and_objects"
+      },
+      {
+        "chapter_number": "Chapter 9",
+        "chapter_title": "Modules and Packages",
+        "file_name": "modules_and_packages"
+      },
+      {
+        "chapter_number": "Chapter 10",
+        "chapter_title": "Concurrency",
+        "file_name": "concurrency"
+      }
+    ]
+  }
