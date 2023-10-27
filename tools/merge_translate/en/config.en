@@ -1,0 +1,8 @@
+{
+ name: "English",
+ id: 0,
+ perfer_font: "",
+ normalize_actions: "Case,Punc",
+ has_hash: False,
+ dictionary_urls: "jos.en,..\\customer\\%company.en"
+}

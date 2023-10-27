@@ -1,0 +1,9 @@
+{  
+ name: "Japanese", 
+ id: 3,
+ codepage: 932,
+ perfer_font: "",  
+ normalize_actions: "Case,Punc",
+ has_hash: False,
+ dictionary_urls: "jos.ja,..\\customer\\%company.ja"
+}

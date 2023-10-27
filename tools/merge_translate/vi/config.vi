@@ -1,0 +1,9 @@
+﻿{  
+ name: "Vietnamese", 
+ id: 4,
+ codepage: 1258,
+ perfer_font: "",  
+ normalize_actions: "Case,Punc",
+ has_hash: False,
+ dictionary_urls: "jos.vi,..\\customer\\%company.vi"
+}

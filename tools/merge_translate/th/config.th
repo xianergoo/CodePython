@@ -1,0 +1,9 @@
+﻿{  
+ name: "Thai", 
+ id: 5,
+ codepage: 874,
+ perfer_font: "",  
+ normalize_actions: "Case,Punc",
+ has_hash: False,
+ dictionary_urls: "jos.th,..\\customer\\%company.th"
+}

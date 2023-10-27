@@ -1,0 +1,8 @@
+﻿{
+ name: "繁体中文", 
+ id : 2,
+ perfer_font: "",
+ normalize_actions: "Case,Punc",
+ has_hash: False,
+ dictionary_urls: "jos.zh-tc,..\\customer\\%Company.zh-tc"
+}
